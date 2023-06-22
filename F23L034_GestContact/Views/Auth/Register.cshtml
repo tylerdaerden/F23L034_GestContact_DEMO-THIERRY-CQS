@@ -1,0 +1,38 @@
+﻿@model RegisterForm
+
+<div class="row">
+    <div asp-validation-summary="ModelOnly">
+    </div>
+    <div class="col-md-6">
+        <form asp-action="Register" asp-controller="Auth" method="post">
+            <div class="form-group">
+                <label asp-for="Nom"></label>
+                <input asp-for="Nom" class="form-control" />
+                <span asp-validation-for="Nom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Prenom"></label>
+                <input asp-for="Prenom" class="form-control" />
+                <span asp-validation-for="Prenom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Passwd"></label>
+                <input asp-for="Passwd" class="form-control" />
+                <span asp-validation-for="Passwd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Confirm"></label>
+                <input asp-for="Confirm" class="form-control" />
+                <span asp-validation-for="Confirm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Register" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
